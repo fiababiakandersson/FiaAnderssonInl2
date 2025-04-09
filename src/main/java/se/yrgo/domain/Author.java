@@ -1,6 +1,5 @@
 package se.yrgo.domain;
 
-import java.time.*;
 import java.util.*;
 
 import jakarta.persistence.*;
@@ -30,7 +29,7 @@ public class Author {
         this.books.add(book);
     }
 
-    public void createBookAndAddToBooks(String title, String genre, Year year) {
+    public void createBookAndAddToBooks(String title, String genre, int year) {
         Book book = new Book(title, genre, year);
         books.add(book);
     }
@@ -49,6 +48,6 @@ public class Author {
 
     @Override
     public String toString() {
-        return "Author [name=" + name + ", nationality=" + nationality + ", books=" + books + "]";
+        return "Author [name=" + name + ", nationality=" + nationality + "]";
     }
 }

@@ -1,6 +1,5 @@
 package se.yrgo.domain;
 
-import java.time.*;
 import java.util.*;
 
 import jakarta.persistence.*;
@@ -14,15 +13,15 @@ public class Book {
     private String title;
     @Column(length = 20)
     private String genre;
-    private Year publicationYear;
+    private int publicationYear;
 
-    @ManyToMany(mappedBy = "books")
+    @ManyToMany
     private List<Reader> readers = new ArrayList<Reader>();
 
     public Book() {
     }
 
-    public Book(String title, String genre, Year publicationYear) {
+    public Book(String title, String genre, int publicationYear) {
         this.title = title;
         this.genre = genre;
         this.publicationYear = publicationYear;
@@ -41,7 +40,7 @@ public class Book {
         return genre;
     }
 
-    public Year getPublicationYear() {
+    public int getPublicationYear() {
         return publicationYear;
     }
 
@@ -51,7 +50,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book [title=" + title + ", genre=" + genre + ", publicationYear=" + publicationYear + ", readers="
-                + readers + "]";
+        return "Book [title=" + title + ", genre=" + genre + ", publicationYear=" + publicationYear
+                + "]";
     }
 }

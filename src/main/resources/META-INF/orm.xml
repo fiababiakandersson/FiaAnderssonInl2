@@ -7,12 +7,9 @@
     <!--  this is used in the chapter on HQL, where we write a named query -->
     <!--  please ignore it until then! -->
 
-<!--    <named-query name="searchByName">
-        <query>from Student as student where student.name =:name</query>
-    </named-query>-->
 
-<!--    <named-query name="showName">
-        <query>select student.name from Student as student where student.name=:name</query>
-    </named-query>-->
+   <named-query name="findGenre">
+        <query>select b from Book as b where b.genre = :genre</query>
+    </named-query>
 
 </entity-mappings>

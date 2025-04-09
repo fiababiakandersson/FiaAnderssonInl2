@@ -14,7 +14,7 @@ public class Reader {
     @Column(length = 20)
     private String email;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "readers")
     private List<Book> books = new ArrayList<Book>();
 
     public Reader() {
@@ -44,6 +44,6 @@ public class Reader {
 
     @Override
     public String toString() {
-        return "Reader [name=" + name + ", email=" + email + ", books=" + books + "]";
+        return "Reader [name=" + name + ", email=" + email + "]";
     }
 }
