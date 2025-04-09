@@ -73,11 +73,11 @@ public class HibernateTest {
         em.persist(author2);
         em.persist(author3);
 
-        // reader1.addBookToReader(book1);
-        // reader2.addBookToReader(book1);
-        // reader2.addBookToReader(book2);
-        // reader3.addBookToReader(book3);
-        // reader3.addBookToReader(book4);
+        reader1.addBookToReader(book1);
+        reader2.addBookToReader(book1);
+        reader2.addBookToReader(book2);
+        reader3.addBookToReader(book3);
+        reader3.addBookToReader(book4);
 
         // List<Author> authors = em.createQuery("FROM Author",
         // Author.class).getResultList();
